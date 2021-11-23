@@ -6,7 +6,7 @@ from time import sleep
 
 conf = json.loads(open('conf.json').read())
 sensor = Adafruit_DHT.DHT11
-gpio = conf['pin']
+gpio = int(conf['pin'])
 ip = conf['ip']
 
 
