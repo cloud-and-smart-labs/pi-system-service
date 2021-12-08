@@ -6,7 +6,7 @@ import os
 import RPi.GPIO as GPIO
 
 conf = json.loads(
-    open('/home/'+os.environ['USER']+'/pi-system-service/').read())
+    open('/home/pi/pi-system-service/').read())
 PIN = int(conf['pin'])
 IP = conf['ip']
 
