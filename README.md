@@ -22,6 +22,15 @@ sudo systemctl enable dht11.service
 sudo systemctl start dht11.service
 ```
 
+### Service status
+```bash
+sudo systemctl status dht11.service
+```
+
+### Service restart
+```bash
+sudo systemctl restart dht11.service
+```
 <br>
 
 ---
