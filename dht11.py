@@ -5,7 +5,7 @@ from time import sleep
 
 
 conf = json.loads(
-    open('/home/pi/pi-system-service/').read())
+    open('/home/pi/pi-system-service/conf.json').read())
 sensor = Adafruit_DHT.DHT11
 gpio = int(conf['pin'])
 ip = conf['ip']
