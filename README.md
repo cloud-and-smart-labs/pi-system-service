@@ -1,4 +1,4 @@
-# Raspberry Pi Services for Sensing and Sctuation
+# Raspberry Pi - Services for Sensing and Actuation
 ---
 ## Setup
 ---
