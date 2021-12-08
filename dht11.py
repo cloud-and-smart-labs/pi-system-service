@@ -1,7 +1,6 @@
 import Adafruit_DHT
 from urllib.request import urlopen
 import json
-import os
 from time import sleep
 
 
