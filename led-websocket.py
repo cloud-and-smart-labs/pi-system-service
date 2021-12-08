@@ -1,10 +1,12 @@
 import asyncio
 import websockets
 import json
+import os
 
 import RPi.GPIO as GPIO
 
-conf = json.loads(open('conf.json').read())
+conf = json.loads(
+    open('/home/'+os.environ['USER']+'/pi-system-service/').read())
 PIN = int(conf['pin'])
 IP = conf['ip']
 

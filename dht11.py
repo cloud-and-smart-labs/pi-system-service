@@ -1,10 +1,12 @@
 import Adafruit_DHT
 from urllib.request import urlopen
 import json
+import os
 from time import sleep
 
 
-conf = json.loads(open('conf.json').read())
+conf = json.loads(
+    open('/home/'+os.environ['USER']+'/pi-system-service/').read())
 sensor = Adafruit_DHT.DHT11
 gpio = int(conf['pin'])
 ip = conf['ip']
