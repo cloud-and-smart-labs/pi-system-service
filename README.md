@@ -1,7 +1,6 @@
 # Raspberry Pi - Services for Sensing and Actuation
----
+
 ## Setup
----
 ### Move the service to the system directory
 ```bash
 sudo mv ~/pi-system-service/dht11.service /etc/systemd/system/dht11.service
@@ -31,11 +30,10 @@ sudo systemctl status dht11.service
 ```bash
 sudo systemctl restart dht11.service
 ```
+---
 <br>
 
----
 ## Remove
----
 ### Stop the service
 ```bash
 sudo systemctl stop dht11.service
