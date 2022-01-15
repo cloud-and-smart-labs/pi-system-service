@@ -1,13 +1,15 @@
 import asyncio
 import websockets
 import json
+from urllib.request import urlopen
 
 import RPi.GPIO as GPIO
 
-conf = json.loads(
-    open('/home/pi/pi-system-service/conf.json').read())
-PIN = int(conf['pin'])
-IP = conf['ip']
+with urlopen('https://raw.githubusercontent.com/cloud-and-smart-labs/pi-system-service/master/led-websocket/conf.json') as url:
+    data = json.loads(url.read().decode())
+    PIN = int(data['pin'])
+    IP = data['ip']
+
 
 URL = 'ws://'+IP+':7890'
 STATE = False
