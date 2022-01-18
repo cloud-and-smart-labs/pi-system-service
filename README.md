@@ -1,9 +1,15 @@
-# Raspberry Pi - Services for Sensing and Actuation
+# Background Services for Sensing and Actuation
 
-## Setup
+## Table of Contents
+- [Creating Service](#creating-service)
+- [Check Service Status](#check-service-status)
+- [Service Restart](#service-restart)
+- [Delete Service](#delete-service)
+
+## Creating Service
 ### Move the service to the system directory
 ```bash
-sudo mv ~/pi-system-service/dht11.service /etc/systemd/system/dht11.service
+sudo mv ~/pi-system-service/service_name.service /etc/systemd/system/service_name.service
 ```
 
 ### Reload the systemctl daemon
@@ -13,27 +19,30 @@ sudo systemctl daemon-reload
 
 ### Enable the service
 ```bash
-sudo systemctl enable dht11.service
+sudo systemctl enable service_name.service
 ```
 
 ### Start the service
 ```bash
-sudo systemctl start dht11.service
+sudo systemctl start service_name.service
 ```
 
+
+## Check Service Status
 ### Service status
 ```bash
-sudo systemctl status dht11.service
+sudo systemctl status service_name.service
 ```
 
+
+## Service Restart
 ### Service restart
 ```bash
 sudo systemctl restart dht11.service
 ```
----
-<br>
 
-## Remove
+
+## Delete Service
 ### Stop the service
 ```bash
 sudo systemctl stop dht11.service
