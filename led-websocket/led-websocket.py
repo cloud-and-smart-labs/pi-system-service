@@ -8,6 +8,10 @@ import RPi.GPIO as GPIO
 with urlopen('https://raw.githubusercontent.com/cloud-and-smart-labs/pi-system-service/master/led-websocket/conf.json') as url:
     data = json.loads(url.read().decode())
     PIN = int(data['pin'])
+    
+
+with open('/tmp/system-service/env.json','r') as conf:
+    data = json.loads(conf.read())
     IP = data['ip']
 
 
